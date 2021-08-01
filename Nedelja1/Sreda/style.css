@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 25px;
+    margin: 15px 0;
+}
+hr {
+    margin: 25px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    display: inline-block;
+    text-align: center;
+    margin: 0 5px;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0 15px;
+}
+
+section > * {
+    padding: 10px;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+aside img {
+    width: 100%;
+}
+
+aside span {
+    font-style: italic;
+    color: red;
+}
+
+main {
+    width: 80%;
+}
+
+main p {
+    width: 80%;
+    font-size: 19px;
+}
+
+main img {
+    width: 80%;
+    margin: 15px 0;
+}
+
+/* ----------- */
+form {
+    border: 1px solid black;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+form > * {
+    display: block;
+}
+
+form hr {
+    margin: 10px 0;
+}
+
+form p {
+    color: red;
+    font-size: 20px;
+}
+
+label {
+    color: red;
+    font-size: 20px;
+}
+
+.not {
+    color: black;
+    margin: 0 5px;
+}
+
+input[type=checkbox] {
+    margin-left: 5px;
+}
