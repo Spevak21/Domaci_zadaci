@@ -62,25 +62,25 @@ console.log('-------------------------------------------------------------------
 let subStr1, subStr2, subStr3, subStr4;
 
 if(!string1.includes('string koji je')) {
-    subStr1 = string1.replace('neki', '');
+    subStr1 = string1.replace('neki ', '');
 }else {
     subStr1 = '';
 }
 
 if(!string2.includes('string koji je')) {
-    subStr2 = string2.replace('neki', '');
+    subStr2 = string2.replace('neki ', '');
 }else {
     subStr2 = '';
 }
 
 if(!string3.includes('string koji je')) {
-    subStr3 = string3.replace('neki', '');
+    subStr3 = string3.replace('neki ', '');
 }else {
     subStr3 = '';
 }
 
 if(!string4.includes('string koji je')) {
-    subStr4 = string4.replace('neki', '');
+    subStr4 = string4.replace('neki ', '');
 }else {
     subStr4 = '';
 }
