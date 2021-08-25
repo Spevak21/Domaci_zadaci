@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    padding: 20px;
+    /* height: 40vh; */
+    
+    /* background-color: rgb(163, 163, 163); */
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 25%;
+    min-width: 340px;
+    margin-bottom: 20px;
+    padding: 30px;
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    box-shadow: .1rem .1rem .5rem rgba(0, 0, 0, 0.3);
+    /* background-color: aqua; */
+}
+
+.form > * {
+    height: 30px;
+    width: 80%;
+    text-align: center;
+}
+
+.form > label {
+    height: 25px;
+}
+
+input[type='text'], input[type='password'] {
+    font-size: 15px;
+    color: rgb(39, 39, 39);
+    border: 1px solid rgb(238, 162, 70);
+    border-radius: 5px;
+}
+
+input[type='text']::placeholder, input[type='password']::placeholder {
+    font-size: 12px;
+    color: rgb(123, 123, 123);
+}
+
+.users-list {
+    min-height: 300px;
+    width: 30%;
+    min-width: 380px;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: rgb(238, 162, 70);
+    box-shadow: .2rem .2rem .3rem rgba(0, 0, 0, 0.3) inset, -.05rem -.05rem .2rem rgba(0, 0, 0, 0.3) inset;
+}
+
+.user {
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: .2rem .2rem .3rem rgba(0, 0, 0, 0.3);
+}
+
+.user:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.div-checkboxes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.div-checkboxes label{
+    text-transform: none;
+    font-weight: normal;
+    font-size: 18px;
+    color: black;
+}
+
+.div-genders {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* padding: 0 30px; */
+}
+
+.div-genders label {
+    text-transform: none;
+    font-weight: normal;
+    font-size: 18px;
+    margin-left: 10px;
+    color: black;
+}
+
+.lRadio-1 {
+    margin-right: 30px;
+}
+
+#city {
+    width: 100px;
+}
+
+label {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 10px;
+    color: rgb(255, 64, 64);
+    margin-top: 4px;
+}
+
+.submit {
+    height: 50px;
+    width: 150px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: white;
+    background-color: rgb(238, 162, 70);
+    border: none;
+    border-radius: 100px;
+    text-shadow: .1rem .1rem .2rem rgba(0, 0, 0, 0.4);
+    box-shadow: .1rem .1rem .2rem rgba(0, 0, 0, 0.3) inset, -.05rem -.05rem .2rem rgba(0, 0, 0, 0.3) inset;
+    transition: all .3s;
+}
+
+.submit:hover {
+    transform: scale(1.05);
+    text-shadow: none;
+    box-shadow: .2rem .2rem .3rem rgba(0, 0, 0, 0.3);
+}
+  
+.submit:active {
+    color: white;
+    transform: translateY(0.5rem) scale(1.05);
+    text-shadow: none;
+    box-shadow: .1rem .1rem .2rem rgba(0, 0, 0, 0.4);
+}
+
+.validated {
+    border: 1px solid rgb(25, 177, 38) !important;
+}
+
+.btn-green {
+    background-color: rgb(25, 177, 38) !important;
+}
+
+.btn-red {
+    background-color: rgb(255, 64, 64) !important;
+}
