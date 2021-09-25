@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <script type="module" src="/resources/js/main.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <section class="top">
+        <div class="display">
+            <div class="display__container">
+                <p class="display__info">Available budget in <span class="display__date"></span>:</p>
+                <p class="display__sum">0</p>
+                <div class="display__income">
+                    <p>INCOME</p>
+                    <div class="display__total-income">
+                        <p>0</p>
+                    </div>
+                </div>
+                <div class="display__expenses">
+                    <p>EXPENSES</p>
+                    <div class="display__total-expenses">
+                        <p>0</p>
+                        <div class="display__percent">
+                            <p>/ %</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bottom">
+        <div class="form">
+            <div class="form__container">
+                <select class="form__type">
+                    <option value="inc" selected>+</option>
+                    <option value="exp">&#8211;</option>
+                </select>
+                <input type="text" class="form__description" placeholder="Add description">
+                <input type="number" class="form__value" placeholder="value" min="0">
+                <button class="form__btn">&#10003;</button>
+            </div>
+        </div>
+        <div class="lists">
+            <div class="lists-left">
+                <p class="lists-left__header">INCOMES</p>
+            </div>
+            <div class="lists-right">
+                <p class="lists-right__header">EXPENSES</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

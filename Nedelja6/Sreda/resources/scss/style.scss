@@ -1,0 +1,375 @@
+// Color variables
+$color-gray-dark: #282828;
+$color-medium: #646464;
+$color-gray: #373737;
+$color-gray-light: #8a8a8a;
+$color-gray-lightest: #eaeaea;
+$color-admin-blue: #effeff;
+
+// mixins
+@mixin btn-sub {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    width: auto;
+    padding: 1rem 2.5rem;
+    color: $color-gray;
+    border: 1px solid $color-gray;
+    border-radius: 5rem;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .5s;
+
+    &:hover,
+    &:focus {
+        color: $color-gray-lightest;
+        background-color: $color-gray;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    background-color: $color-gray;
+}
+
+h3 {
+    color: $color-gray-lightest;
+    margin: 0 0 1rem 1rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    height: 14.5rem;
+    width: 40rem;
+    margin: 3rem 0 2rem 1rem;
+    padding: 2rem;
+    border-radius: .5rem;
+    background-color: $color-gray-lightest;
+    box-shadow: .2rem .2rem .5rem $color-gray-dark;
+    transition: all .5s;
+
+    &--shrink {
+        border-radius: 4rem;
+        height: 7.66rem;
+    }
+
+    // &.admin {
+    //     background-color: $color-admin-blue !important;
+    // }
+
+    & *:focus {
+        outline: none;
+    }
+
+    &__user {
+        font-size: 2.5rem;
+        color: $color-gray;
+        line-height: 3.65rem;
+        margin-left: 1rem;
+        opacity: 1;
+        transition: opacity .5s;
+
+        &--hidden {
+            // visibility: hidden; // RESITI PROBLEM visibiliti sakrije label pre nego sto prodje animacija opaciteta
+            opacity: 0;
+        }
+    }
+
+    div {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+        margin-bottom: .5rem;
+        opacity: 1;
+
+        transition: opacity .5s;
+
+        &.hide {
+            opacity: 0; 
+        }
+
+        span {
+            font-size: 1.8rem;
+            color: $color-gray;
+        }
+
+        input {
+            width: 26rem;
+            margin-bottom: .2rem;
+            color: $color-gray;
+            border: none;
+            border-bottom: 1px solid $color-gray-light;
+            background-color: $color-gray-lightest;
+        }
+    }
+
+    &__submit {
+        @include btn-sub;
+        // position: absolute;
+        // bottom: 2rem;
+        // right: 2rem;
+        // width: 9rem;
+        // padding: 1rem 2rem;
+        // color: $color-gray;
+        // border: 1px solid $color-gray;
+        // border-radius: 5rem;
+        // background-color: $color-gray-lightest;
+        // cursor: pointer;
+        // transition: all .5s;
+
+        // &:hover,
+        // &:focus {
+        //     color: $color-gray-lightest;
+        //     background-color: $color-gray;
+        // }
+
+        // &:active {
+        //     color: $color-gray;
+        //     background-color: $color-gray-lightest;
+        // }
+    }
+}
+
+.user-container {
+    
+    min-height: 19.4rem;
+    height: auto;
+    margin-bottom: 2rem;
+    overflow: hidden;
+
+    // -------------------------------------------------------------------------------- USER CART
+    .cart {
+
+        &__list {
+            display: flex;
+            
+            min-height: 16rem;
+            padding: 1rem 1rem 2rem 1rem;
+            // border-top: 1px solid $color-gray-light;
+            border-bottom: 1px solid $color-gray-light;
+            // border-radius: .5rem;
+            background-color: transparent;
+            opacity: 1;
+            pointer-events: auto;
+            overflow-x: auto;
+        
+            &--hidden {
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            min-width: 15rem;
+            padding: 2rem;
+            border-radius: .5rem;
+            background-color: $color-gray-lightest;
+    
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+
+            span {
+                font-size: 1.3rem;
+                color: $color-medium;
+            }
+    
+            button {
+                align-self: center;
+                width: 10rem;
+                margin-top: 1rem;
+                padding: .5rem;
+                color: $color-gray;
+                border: 1px solid $color-gray;
+                border-radius: 5rem;
+                transition: all .5s;
+
+                &:hover {
+                    width: 7rem;
+                    color: $color-gray-lightest;
+                    background-color: $color-gray;
+                }
+            }
+    
+            p {
+                margin-bottom: .5rem;
+            }
+
+            hr {
+                margin-top: .5rem;
+                border: none;
+                border-bottom: 1px solid $color-gray-light;
+            }
+        }
+    }
+
+    // -------------------------------------------------------------------------------- ADMIN FORM
+    .admin-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: relative;
+        // height: 14.4rem;
+        width: 40rem;
+        margin-left: 1rem;
+        padding: 2rem 2rem 7.7rem 2rem;
+        border-radius: .5rem;
+        background-color: $color-admin-blue;
+        box-shadow: .2rem .2rem .5rem $color-gray-dark;
+        transform: translateX(-200%);
+        transition: all 1s ease-in-out;
+    
+        &--show {
+            transform: translateX(0) !important;
+        }
+
+        & * {
+            transition: all .5s;
+        }
+
+        & *:focus {
+            outline: none;
+        }
+
+        select {
+            background-color: $color-admin-blue;
+            margin-bottom: 1rem;
+            color: $color-gray-light;
+            
+            option {
+                color: $color-gray;
+            }
+        }
+    
+        input:not(:last-child) {
+            width: 26rem;
+            margin-bottom: 1rem;
+            color: $color-gray;
+            border: none;
+            border-bottom: 1px solid $color-gray-light;
+            background-color: $color-admin-blue;
+        }
+    
+        input:nth-last-child(2) {
+            margin-bottom: 0;
+        }
+    
+        &__btn-ATP {
+            @include btn-sub;
+
+            &:hover,
+            &:focus {
+                color: $color-admin-blue;
+            }
+        }
+    }
+}
+
+
+// --------------------------------------------------------------------------------------- PRODUCTS CONTAINER
+.product-container {
+    
+    .product {
+        &__list {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 2rem 2rem;
+            padding: 1rem;
+            // border: 1px solid $color-gray-light;
+            border-radius: .5rem;
+            // background-color: rgb(201, 115, 115);
+            
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            min-width: 15rem;
+            width: 25rem;
+            padding: 2rem;
+            border-radius: .5rem;
+            background-color: $color-gray-lightest;
+            transition: background-color .5s;
+    
+            input {
+                width: 100%;
+                margin: 1rem 0;
+                color: $color-gray;
+                border: none;
+                border-bottom: 1px solid $color-gray-light;
+                background-color: transparent;
+            }
+
+            button {
+                align-self: center;
+                width: 12rem;
+                margin-top: 1rem;
+                padding: .5rem;
+                color: $color-gray;
+                border: 1px solid $color-gray;
+                border-radius: 5rem;
+                transition: all .5s;
+
+                &:hover,
+                &:focus {
+                    width: 15rem;
+                    color: $color-gray-lightest;
+                    background-color: $color-gray;
+                }
+            }
+
+            *:focus {
+                outline: none;
+            }
+    
+            *:not(:last-child) {
+                margin-bottom: .5rem;
+            }
+
+            span {
+                font-size: 1.3rem;
+                color: $color-medium;
+            }
+        }
+
+        
+    }
+    
+}
+
+// -------------------------------------------------------------------------------- ADDITIONAL HELPER CLASSES
+.admin {
+    background-color: $color-admin-blue !important;
+}
+
+.error {
+    color: red !important;
+    border-bottom: 1px solid red !important;
+    
+    &::placeholder {
+        color: red;
+    }
+}

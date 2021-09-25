@@ -1,0 +1,42 @@
+html {
+    font-family: sans-serif;
+}
+
+.btn-print {
+    margin: 20px 0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: rgb(42, 91, 152);
+}
+
+table {
+    border-collapse: collapse;
+    /* border: solid black 2px; */
+}
+
+thead tr {
+    /* border-bottom: 1px solid black; */
+    padding: 5ps;
+    color: white;
+    background-color: rgb(42, 91, 152);
+}
+
+th {
+    width: 300px;
+    padding: 5px;
+}
+
+td {
+    padding: 5px;
+    text-align: center;
+    background-color: rgb(178, 208, 244);
+    border: solid white 2px;
+}
+
+.total {
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: rgb(42, 91, 152);
+}
