@@ -1,0 +1,73 @@
+$color-green: #81bf97;
+$color-red: #fa4c4c;
+$color-gray: #3c3c3c;
+
+.display {
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: white;
+    box-shadow: .1rem .1rem .5rem rgba(0, 0, 0, 0.3);
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+        width: 40rem;
+        padding: 2rem;
+        border: 1px solid $color-green;
+        border-radius: .3rem;
+    }
+
+    &__info {
+        font-size: 2rem;
+        color: darken($color-green, 10%);
+    }
+
+    &__sum {
+        font-size: 5rem;
+        font-weight: 100;
+        color: $color-gray;
+        margin: 2rem 0;
+    }
+
+    &__income, &__expenses {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 1rem 1.5rem;
+        border-radius: .5rem;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    &__income {
+        margin-bottom: 1rem;
+        background-color: $color-green;
+    }
+
+    &__expenses {
+        background-color: $color-red;
+    }
+
+    &__total-income, &__total-expenses {
+        display: flex;
+        font-size: 1.8rem;
+    }
+
+    &__total-income {
+        margin-right: 3.5rem;
+    }
+
+    &__percent {
+        min-height: 1.9rem;
+        min-width: 2.5rem;
+        font-size: 1rem;
+        text-align: right;
+        margin: auto 0 auto 1rem;
+        padding: .3rem;
+        background-color: lighten($color-red, 10%);
+    }
+}

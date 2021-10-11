@@ -1,0 +1,106 @@
+$color-green: #81bf97;
+$color-red: #fa4c4c;
+$color-gray: #3c3c3c;
+
+.item {
+    // display: flex;
+
+    // height: 7rem;
+    width: 100%;
+    padding: .5rem;
+    font-size: 1.6rem;
+    color: $color-gray;
+    border-radius: .5rem;
+    background-color: white;
+    box-shadow: .1rem .1rem .5rem rgba(0, 0, 0, 0.3);
+    // overflow: hidden;
+
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+    &:hover {
+        .item__btn-delete {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+
+    &__border {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        padding: 1.2rem 1rem;
+        border-radius: .3rem;
+
+        &--green {
+            border: 1px solid $color-green;
+        }
+
+        &--red {
+            border: 1px solid lighten($color-red, 15);
+        }
+    }
+
+    &__description {
+        width: 65%;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 35%;
+    }
+
+    &__value {
+        text-align: right;
+
+        &--green {
+            color: darken($color-green, 10%);
+        }
+
+        &--red {
+            color: lighten($color-red, 5%);
+        }
+    }
+
+    &__percentage {
+        font-size: 1rem;
+        color: white;
+        margin: auto 0 auto 1rem;
+        padding: .3rem;
+        background-color: lighten($color-red, 10%);
+    }
+
+    &__btn-delete {
+        height: 2rem;
+        width: 2rem;
+        margin-left: 1rem;
+        background-color: white;
+        
+        border-radius: 4rem;
+        cursor: pointer;
+
+        opacity: 0;
+        pointer-events: none;
+
+        transition: all .3s;
+
+        &--green {
+            color: darken($color-green, 10%);
+            border: 1px solid darken($color-green, 10%);
+        }
+
+        &--red {
+            color: $color-red;
+            border: 1px solid $color-red;
+        }
+
+        // &--invisible {
+        //     opacity: 0;
+        //     pointer-events: none;
+        // }
+    }
+}

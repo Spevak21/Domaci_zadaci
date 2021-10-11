@@ -1,0 +1,122 @@
+$color-green: #81bf97;
+$color-red: #fa4c4c;
+$color-gray: #3c3c3c;
+
+.form {
+    display: flex;
+    justify-content: center;
+    height: 8rem;
+    width: 100vw;
+    padding: 1.5rem;
+    background-color: $color-green;
+    box-shadow: 0 .2rem .3rem rgba(0, 0, 0, 0.3), 0 .2rem .3rem rgba(0, 0, 0, 0.3) inset;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        & * {
+            color: $color-gray;
+        }
+
+        &--suggestions {
+            display: flex;
+            flex-direction: column;
+            
+            position: absolute;
+            left: 6rem;
+            top: 5rem;
+
+            height: auto;
+            width: 40rem;
+            
+            background-color: rgba(255, 255, 255, 0.6);
+
+            .sugestion {
+                font-size: 1.5rem;
+                margin-left: 1rem;
+                margin-bottom: .5rem;
+                color: $color-gray;
+
+                &:first-of-type {
+                    margin-top: 1rem;
+                }
+
+                &:last-of-type {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+
+    &__type, &__description, &__value {
+        height: 100%;
+        padding: 1rem;
+        margin-right: 2rem;
+        font-size: 1.5rem;
+        border: none;
+        border-radius: .3rem;
+
+        transition: all .5s;
+
+        &:focus {
+            outline: none;
+            transform: translateY(-.1rem);
+            box-shadow: 0 .2rem .3rem rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    &__type {
+        width: 5rem;
+        padding: 1rem 1.5rem;
+        -webkit-appearance: none;
+    }
+
+    &__description {
+        width: 40rem;
+    }
+
+    &__value {
+        width: 10rem;
+        -moz-appearance: textfield;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    }
+
+    &__btn {
+        height: 4rem;
+        width: 4rem;
+        font-size: 2rem;
+        font-weight: bolder;
+        color: $color-green;
+        border: none;
+        border-radius: 4rem;
+        cursor: pointer;
+        box-shadow: 0 .2rem .3rem rgba(0, 0, 0, 0.3);
+
+        transition: transform .3s;
+
+        &--green {
+            color: $color-green;
+        }
+
+        &--red {
+            color: lighten($color-red, 10%);
+        }
+
+        &:active {
+            transform: translateY(.1rem);
+            box-shadow: 0 .1rem .2rem rgba(0, 0, 0, 0.3);
+        }
+
+        &:focus {
+            outline: none;
+            background-color: white;
+        }
+    }
+}

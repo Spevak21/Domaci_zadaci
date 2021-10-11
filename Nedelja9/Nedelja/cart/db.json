@@ -1,0 +1,60 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Nescafe - Frothy French Vanilla",
+      "price": 1,
+      "info": "Delicious coffee with vanilla extract",
+      "quantity": 15
+    },
+    {
+      "id": 2,
+      "name": "Jameson - Irish Whiskey",
+      "price": 80,
+      "info": "Exclusive irish whiskey",
+      "quantity": 1
+    },
+    {
+      "id": 3,
+      "name": "Cake - Mini Cheesecake",
+      "price": 10,
+      "info": "Delicious instant mini cake",
+      "quantity": 4
+    },
+    {
+      "id": 4,
+      "name": "Lamb - Shoulder, Boneless",
+      "price": 3,
+      "info": "Fresh lamb shoulder 1kg",
+      "quantity": 2
+    },
+    {
+      "id": 5,
+      "name": "Pastry - Raisin Muffin - Mini",
+      "price": 3,
+      "info": "Raisin muffins 12pcs",
+      "quantity": 2
+    },
+    {
+      "id": 6,
+      "name": "Wine - Red, Cabernet Merlot",
+      "price": 15,
+      "info": "Red wine 0.75l",
+      "quantity": 3
+    },
+    {
+      "id": 7,
+      "name": "Garbage Bags - Black",
+      "price": 2,
+      "info": "Garbag bags 50pcs",
+      "quantity": 2
+    },
+    {
+      "id": 8,
+      "name": "Jolt Cola - Electric Blue",
+      "price": 2,
+      "info": "Energy drink 0.2l",
+      "quantity": 4
+    }
+  ]
+}
